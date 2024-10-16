@@ -1,11 +1,11 @@
-#include <iostream>
+Ôªø#include <iostream>
 #include "money_utils.hpp"
 #include "array_utils.hpp"
 
 
 int main()
 {
-	// «‡‰‡˜‡ 7.1
+	// –ó–∞–¥–∞—á–∞ 7.1
 	double* value = new double;
 	rubles::read(value);
 	value = lil::convert(value);
@@ -13,10 +13,10 @@ int main()
 
 	delete value;
 
-	// «‡‰‡˜‡ 7.2
+	// –ó–∞–¥–∞—á–∞ 7.2
 	int size;
 	int* sum = new int;
-	std::cout << "\n¬‚Â‰ËÚÂ ‡ÁÏÂ Ï‡ÒÒË‚‡: ";
+	std::cout << "\n–í–≤–µ–¥–∏—Ç–µ —Ä–∞–∑–º–µ—Ä –º–∞—Å—Å–∏–≤–∞: ";
 	std::cin >> size;
 
 	int* mass = new int[size];
@@ -30,14 +30,14 @@ int main()
 			*sum += mass[i];
 	}
 
-	std::cout << "—ÛÏÏ‡ = " << *sum << std::endl;
+	std::cout << "–°—É–º–º–∞ = " << *sum << std::endl;
 
 	delete sum;
 	delete[] mass;
 
-	// «‡‰‡˜‡ 7.3
+	// –ó–∞–¥–∞—á–∞ 7.3
 	int Size;
-	std::cout << "¬‚Â‰ËÚÂ ‡ÁÏÂ Ï‡ÒÒË‚‡: ";
+	std::cout << "–í–≤–µ–¥–∏—Ç–µ —Ä–∞–∑–º–µ—Ä –º–∞—Å—Å–∏–≤–∞: ";
 	std::cin >> Size;
 
 	int* arr = new int[Size];
@@ -48,14 +48,14 @@ int main()
 
 	delete[] arr;
 
-	// «‡‰‡˜‡ 7.4
+	// –ó–∞–¥–∞—á–∞ 7.4
 	int sIze;
-	std::cout << "\n¬‚Â‰ËÚÂ  ‡ÁÏÂ Ï‡ÒÒË‚‡: ";
+	std::cout << "\n–í–≤–µ–¥–∏—Ç–µ  —Ä–∞–∑–º–µ—Ä –º–∞—Å—Å–∏–≤–∞: ";
 	std::cin >> sIze;
 	int* arr_2 = new int[sIze];
 
 	arr::read(arr_2, sIze);
-	std::cout << "\n¬‚Â‰ËÚÂ ˜ËÒÎÓ ÍÓÚÓÓÂ ‰Ó·‡‚ËÚÒˇ ‚ ÍÓÌÂˆ Ï‡ÒÒË‚‡: ";
+	std::cout << "\n–í–≤–µ–¥–∏—Ç–µ —á–∏—Å–ª–æ –∫–æ—Ç–æ—Ä–æ–µ –¥–æ–±–∞–≤–∏—Ç—Å—è –≤ –∫–æ–Ω–µ—Ü –º–∞—Å—Å–∏–≤–∞: ";
 	int val;
 	std::cin >> val;
 
@@ -64,6 +64,29 @@ int main()
 	arr::show(arr_2, sIze);
 
 	delete[] arr_2;
+
+	//–ø–µ—Ä—Å–µ—á–µ–Ω–∏–µ –º–∞—Å—Å–∏–≤–æ–≤
+	int* arr_inters = NULL;
+	int arr_inters_size = 0;
+
+	int size_test_arr_1 = 3;
+	int* test_arr_1 = new int[size_test_arr_1]{ 1, 8, 9 };
+	
+	int size_test_arr_2 = 5;
+	int* test_arr_2 = new int[size_test_arr_2]{ 5, 1, 45, 1, 9 };
+
+	arr_inters = arr::intersection(test_arr_1, size_test_arr_1, test_arr_2, size_test_arr_2, arr_inters_size);
+
+	arr::show(arr_inters, arr_inters_size);
+
+	delete[] arr_inters;
+	arr_inters_size = 0;
+
+	arr_inters = arr::notDating(test_arr_1, size_test_arr_1, test_arr_2, size_test_arr_2, arr_inters_size);
+
+	arr::show(arr_inters, arr_inters_size);
+
+	delete[] arr_inters;
 
 	return 1;
 }

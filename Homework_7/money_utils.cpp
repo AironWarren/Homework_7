@@ -1,4 +1,4 @@
-#include "iostream"
+ï»¿#include "iostream"
 #include "money_utils.hpp"
 
 const double convert_ruble_in_lil = 3.14;
@@ -10,11 +10,11 @@ namespace rubles
 	{
 		setlocale(LC_ALL, "ru");
 
-		std::cout << "Ââåäèòå êîëëè÷åñòâî äåíåã â ðóáëÿõ: ";
+		std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð´ÐµÐ½ÐµÐ³ Ð² Ñ€ÑƒÐ±Ð»ÑÑ…: ";
 		std::cin >> *money;
 		while (*money < 0)
 		{
-			std::cout << "\nÂû ââåëè îòðèöàòåëüíî çíà÷åíèå, ïîâòîðèòå ïîïûòêó: ";
+			std::cout << "\nÐ’Ñ‹ Ð²Ð²ÐµÐ»Ð¸ Ð¾Ñ‚Ñ€Ð¸Ñ†Ð°Ñ‚ÐµÐ»ÑŒÐ½Ð¾ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ, Ð¿Ð¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð¿Ð¾Ð¿Ñ‹Ñ‚ÐºÑƒ: ";
 			std::cin >> *money;
 		}
 	}
@@ -37,6 +37,6 @@ namespace lil
 	{
 		setlocale(LC_ALL, "ru");
 
-		std::cout << "Â ëèëèïóòñêîé âàëþòå ââåêäåíîå çíà÷åíèå = " << *money;
+		std::cout << "Ð’ Ð»Ð¸Ð»Ð¸Ð¿ÑƒÑ‚ÑÐºÐ¾Ð¹ Ð²Ð°Ð»ÑŽÑ‚Ðµ Ð²Ð²ÐµÐºÐ´ÐµÐ½Ð¾Ðµ Ð·Ð½Ð°Ñ‡ÐµÐ½Ð¸Ðµ = " << *money;
 	}
 }

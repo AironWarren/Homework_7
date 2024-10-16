@@ -1,4 +1,4 @@
-namespace rubles
+﻿namespace rubles
 {
 	void read(double* const);
 }
